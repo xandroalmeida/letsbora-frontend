@@ -1,0 +1,759 @@
+.content-experiencia-detalhe {
+   .header-experiencia-detalhe {
+      margin-bottom: 5rem;
+
+      @include phone {
+         margin-top: 30px;
+      }
+
+      .row {
+         justify-content: space-between;
+         align-items: center;
+
+         @include phone {
+            flex-direction: column;
+         }
+
+         .nome-experiencia {
+            max-width: 450px;
+            font-size: 3.8rem;
+            line-height: 4.2rem;
+
+            @include phone {
+               text-align: center;
+               padding: 0 15px;
+            }
+         }
+
+         .box-promo {
+            background-color: var(--rosa);
+            width: 243px;
+            height: 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.7rem;
+            padding-top: 1rem;
+            color: #fff;
+            font-family: "Nazare";
+            font-weight: 500;
+
+            @include phone {
+               margin: 0 auto;
+            }
+         }
+
+         .txt-comprar-agora {
+            font-size: 2.4rem;
+            font-family: 'Nazare';
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+         }
+
+         .parcelamento {
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 8px;
+         }
+      }
+   }
+
+   .gallery-experiencias {
+      width: 95%;
+      margin: 0 auto 4rem;
+      max-width: 1660px;
+      overflow: hidden;
+      height: auto;
+
+      .slick-slide {
+         opacity: 0.5;
+         transition: all ease-out 0.3s;
+
+         &.slick-active {
+            opacity: 1;
+         }
+
+         .slide {
+            width: 55vw !important;
+            max-width: 1056px;
+            height: 594px;
+            padding: 0 22px;
+
+            @include notebooks {
+               height: 400px;
+            }
+
+            @include phone {
+               height: 300px;
+               width: 60vw !important;
+               padding: 0 5px;
+            }
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+         content: "" !important;
+         background-image: url("/assets/imgs/arrow_carousel_experiencia.png");
+         background-repeat: no-repeat;
+         width: 20px;
+         height: 34px;
+      }
+
+      .slick-next {
+         right: 7% !important;
+         width: 20px;
+         height: 34px;
+         z-index: 1;
+      }
+
+      .slick-prev {
+         left: 7% !important;
+         width: 20px;
+         height: 34px;
+         z-index: 1;
+      }
+   }
+
+   .info-adicional {
+      ul {
+         display: flex;
+         justify-content: space-between;
+         max-width: 960px;
+         margin: 0 auto;
+
+         @include phone {
+            flex-wrap: wrap;
+            justify-content: center;
+         }
+
+         li {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 700;
+            max-width: 16.66%;
+
+            @include phone {
+               width: 33%;
+               margin-bottom: 30px;
+               max-width: 33%;
+               padding: 0 10px;
+            }
+
+            img {
+               margin-bottom: 1.5rem;
+            }
+
+            span {
+               font-weight: 400;
+            }
+         }
+      }
+   }
+
+   .adicional-experiencia {
+      width: 100%;
+      padding-top: 11rem;
+      position: relative;
+      margin-top: 5rem;
+
+      @include phone {
+         text-align: center;
+      }
+
+      &:before {
+         content: "";
+         background-color: var(--rosa);
+         width: 100%;
+         height: 82%;
+         position: absolute;
+         top: 0;
+         left: 0;
+
+         @include phone {
+            height: 90%;
+         }
+      }
+
+      h2 {
+         font-size: 3.8rem;
+         margin-bottom: 40px;
+
+         @include phone {
+            margin-bottom: 15px;
+         }
+      }
+
+      p {
+         color: #fff;
+         font-weight: 300;
+         font-size: 1.9rem;
+         text-align: left;
+      }
+
+      .box-price {
+         text-align: center;
+
+         .price-slash {
+            font-size: 3.3rem;
+            font-weight: 700;
+            font-family: "Nazare";
+            position: relative;
+
+            &::after {
+               content: "";
+               width: 175px;
+               height: 4px;
+               background-color: #fff;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               margin-left: -87.5px;
+               margin-top: -4px;
+               transform: rotate(-10deg);
+            }
+
+            @include phone {
+               margin-top: 30px;
+
+               &::after {
+                  width: 140px;
+                  margin-left: -70px;
+               }
+            }
+         }
+
+         .price-sale {
+            font-size: 6.6rem;
+            line-height: 6.6rem;
+            font-weight: 700;
+            font-family: "Nazare";
+            color: #fff;
+            margin: 2.4rem 0 1rem;
+
+            span {
+               font-family: "Open Sans", sans-serif;
+               display: block;
+               font-weight: 300;
+               font-size: 1.5rem;
+               line-height: 1.5rem;
+               color: var(--gray);
+            }
+         }
+
+         a {
+            border: 2px solid #fff;
+            width: 38.3rem;
+            height: 6.4rem;
+            color: #fff;
+            margin: 3.7rem auto 0;
+            font-size: 3rem;
+            cursor: pointer;
+            @extend %full-center;
+         }
+      }
+
+      .gallery-imgs-exp-others {
+         position: relative;
+         @include phone {
+            width: 90% !important;
+            margin: 0 auto;
+         }
+
+         .slick-slider {
+            margin-top: 10rem;
+
+            .slide {
+               width: 100%;
+               height: 289px;
+               padding: 0 12px;
+   
+               @include phone {
+                  height: 140px;
+               }
+   
+               img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  object-position: center;
+               }
+
+               &>div {
+                  height: 100%;
+               }
+            }
+
+            .slick-slide:nth-child(odd) {
+               width: 32vw !important;
+
+               @include phone {
+                  width: 45vw !important;
+               }
+            }
+
+            .slick-slide:nth-child(even) {
+               width: 20vw !important;
+
+               @include phone {
+                  width: 50vw !important;
+               }
+            }
+         }
+      }
+   }
+
+   .schedule-days {
+      margin-top: 12rem;
+
+      ul {
+         li {
+            display: flex;
+            margin-bottom: 11rem;
+
+            @include phone {
+               flex-direction: column;
+            }
+
+            img {
+               width: 49%;
+               height: 289px;
+               object-fit: cover;
+               object-position: center;
+
+               @include phone {
+                  width: 100%;
+                  height: 200px;
+                  margin-bottom: 30px;
+               }
+            }
+
+            .info-day {
+               margin-left: 12%;
+               width: 37.41%;
+
+               @include phone {
+                  margin-left: 0;
+                  width: 100%;
+                  text-align: left;
+               }
+
+               h3 {
+                  font-size: 5rem;
+                  margin-bottom: 4rem;
+
+                  @include phone {
+                     font-size: 4rem;
+                  }
+               }
+
+               p {
+                  font-size: 1.9rem;
+                  line-height: 2.3rem;
+               }
+
+               .price-day {
+                  background-color: var(--rosa);
+                  color: #fff;
+                  font-family: 'Nazare';
+                  font-size: 2.1rem;
+                  font-weight: 600;
+                  padding: 1rem 0;
+                  display: flex;
+                  justify-content: center;
+               }
+
+               a {
+                color: var(--rosa);  
+               }
+            }
+         }
+      }
+
+      .btn-see-more {
+         font-weight: 600;
+         margin: 0 auto;
+         width: 260px;
+         height: 50px;
+         @extend %full-center;
+         font-size: 16px;
+
+         &:hover {
+            background-color: var(--rosa);
+         }
+      }
+   }
+
+   .experiencias-relacionadas {
+      margin-top: 12rem;
+
+      h3 {
+         text-align: center;
+         font-size: 5.4rem;
+         line-height: 1.8rem;
+
+         @include phone {
+            font-size: 3rem;
+            line-height: .6rem;
+         }
+      }
+
+      .content-relacionadas {
+         background-color: var(--rosa);
+         padding: 4rem;
+
+         .slide {
+            padding: 0 20px;
+            max-width: 350px;
+
+            img {
+               margin-bottom: 14px;
+               width: 100%;
+               height: 289px;
+               object-fit: cover;
+               object-position: center;
+
+               @include notebooks {
+                  height: 189px;
+               }
+            }
+
+            h4 {
+               color: #fff;
+               font-size: 2.5rem;
+               font-family: "Open Sans", sans-serif;
+               font-weight: 600;
+            }
+         }
+      }
+   }
+
+   .all-inclusive {
+      margin: 12rem 0;
+
+      h3 {
+         font-size: 5rem;
+         text-align: center;
+         margin-bottom: 5rem;
+      }
+
+      p {
+         font-size: 1.9rem;
+         max-width: 800px;
+         margin: 0 auto 2rem;
+      }
+   }
+
+   .container-agendamento {
+      background-color: var(--gray);
+      padding: 5.6rem 6rem 5.2rem;
+      color: #fff;
+      margin-top: 6rem;
+
+      @include phone {
+         margin-top: 0;
+         width: 100vw;
+         height: 100vh;
+         position: fixed;
+         right: 0;
+         top: 70px;
+         z-index: 4000;
+         padding-top: 15px;
+         overflow-y: scroll;
+      }
+
+      .header-agendamento {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 2.5rem;
+         
+         h3 {
+            color: #fff;
+            font-size: 30px;
+         }
+
+         .icon-fechar {
+            cursor: pointer;
+         }
+      }
+
+      .body-agendamento {
+         display: grid;
+         grid-template-columns: .6fr 1.2fr 1.2fr;
+         column-gap: 5rem;
+
+         @include phone {
+            grid-template-columns: 1fr;
+            row-gap: 15px;
+            column-gap: 0;
+            padding-bottom: 100px;
+         }
+
+         .quantidade {
+            margin-top: 6rem;
+            
+            @include phone {
+               margin-top: 0;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+            }
+
+            .box-quantidade {
+               display: flex;
+               align-items: center;
+               font-size: 1.9rem;
+               margin-bottom: 3rem;
+
+               &:last-child {
+                  margin-bottom: 0;
+               }
+
+               @include phone {
+                  width: 100px;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  margin-bottom: 0;
+
+                  span {
+                     margin-top: 6px;
+                  }
+               }
+               
+               .bx-qty {
+                  display: flex;
+                  align-items: center;
+                  margin-right: 12px;
+                  font-size: 2rem;
+                  font-weight: 600;
+                  cursor: pointer;
+                  
+                  @include phone { 
+                     margin-right: 0;
+                     font-size: 3rem;
+                  }
+
+                  .input {
+                     width: 46px;
+                     height: 40px;
+                     border: 1px solid #fff;
+                     background-color: var(--gray);
+                     text-align: center;
+                     font-size: 1.9rem;
+                     color: #fff;
+                     margin: 0 10px;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     font-weight: 400;
+                  }
+               }
+            }
+         }
+
+         .container-calendario, .container-total {
+            width: 100%;
+            border: 1px solid #fff;
+            border-radius: 4px;
+         }
+
+         .container-calendario {
+            padding: 1.5rem;
+         }
+
+         .container-total {
+            padding: 2.5rem 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .total-price {
+               font-size: 2.2rem;
+               font-family: 'Nazare';
+               display: block;
+               text-align: center;
+            }
+
+            .qty-compras, .dia-escolhido {
+               display: block;
+               text-align: center;
+               font-weight: 500;
+               margin: 2.5rem 0;
+               font-size: 1.6rem;
+            }
+
+            .dia-escolhido {
+               margin: 0 0 2rem;
+            }
+
+            .add-cart {
+               border: 1px solid var(--rosa);
+               color: #fff;
+               display: block;
+               padding: 1.5rem 0;
+               text-align: center;
+               font-family: 'Open Sans', sans-serif;
+               font-size: 1.6rem;
+               margin-bottom: 12px;
+
+               &:hover {
+                  background-color: var(--rosa);
+               }
+
+               &.disabled {
+                  cursor: unset !important;
+                  border: 1px solid #888 !important;
+                  background-color: transparent !important;
+                  color: #888 !important;
+               }
+            }
+
+            .btn-checkout {
+               display: block;
+               border: 1px solid var(--gray);
+               background-color: var(--rosa);
+               color: #fff;
+               padding: 1.4rem 4rem;
+               text-align: center;
+               font-family: 'Open Sans', sans-serif;
+               font-size: 1.6rem;
+
+               &:hover {
+                  background-color: var(--gray);
+                  border: 1px solid var(--rosa);
+               }
+
+               &.disabled {
+                  cursor: unset !important;
+                  border: 1px solid #888 !important;
+                  background-color: transparent !important;
+                  color: #888 !important;
+               }
+            }
+
+            .error-message {
+               color: var(--rosa);
+               text-align: center;
+               margin-top: 10px;
+               font-size: 1.5rem;
+            }
+         }
+      }
+   }
+
+   .DayPicker {
+      font-size: 1.6rem;
+      width: 100%;
+
+      .DayPicker-Month {
+         width: 85%;
+      }
+
+      .DayPicker-NavButton--prev {
+         right: inherit;
+         left: 0;
+      }
+
+      .DayPicker-Caption {
+         text-align: center;
+         font-family: 'Nazare';
+         font-size: 2rem;
+      }
+
+      .DayPicker-Day {
+         padding: .8em 0;
+      }
+
+      &:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+         background-color: #bbb !important;
+      }
+
+      .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+         background-color: var(--rosa);   
+      }
+
+      .DayPicker-Day--today {
+         color: var(--rosa)
+      }
+
+      .DayPicker-Day--disabled {
+         color: #666;
+      }
+   }
+
+   .spacer-fake {
+      height: 20rem;
+   }
+}
+
+.feedback-carrinho {
+   position: fixed;
+   right: -5000px;
+   bottom: 30px;
+   width: 35vw;
+   height: 12vh;
+   border-left: 6px solid var(--rosa);
+   background-color: #fff;
+   border-top-left-radius: 4px;
+   border-bottom-left-radius: 4px;
+   padding: 15px;
+   font-size: 2rem;
+   font-weight: 700;
+   color: #4BB543;
+   box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.3)  ; 
+	-webkit-box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.3)  ; 
+	-moz-box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.3)  ; 
+   transition: right ease-out .4s;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   i {
+      margin-right: 10px;
+   }
+
+   &.show {
+      right: 0;
+   }
+
+   a {
+      max-width: 200px;
+      margin: 10px auto 0;
+   }
+
+   @include notebooks {
+      height: 17vh;
+   }
+
+   @include small-desktop {
+      height: 17vh;
+   }
+
+   @include phone {
+      width: 100vw;
+      right: 0;
+      bottom: -2000px;
+      z-index: 5000;
+
+      box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.3)  ; 
+	   -webkit-box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.3)  ; 
+	   -moz-box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.3)  ; 
+
+      &.show {
+         bottom: 0;
+         height: 110px;
+      }
+   }
+}

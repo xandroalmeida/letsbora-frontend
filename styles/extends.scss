@@ -1,0 +1,13 @@
+%btn-default {
+   position: relative;
+   color: var(--rosa);
+   border: 1px solid var(--rosa);
+   padding: 14px 30px;
+   font-size: 1.6rem;
+}
+
+%full-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

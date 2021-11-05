@@ -1,0 +1,73 @@
+.modal-coupon {
+   position: fixed;
+   z-index: 5000;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   left: -5000px;
+   opacity: 0;
+   transition: opacity .3s ease-out;
+
+   &.open {
+      left: 0;
+      opacity: 1;
+   }
+
+   .overlay {
+      background-color: rgba($color: #000, $alpha: .7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+   }
+
+   .box-coupon {
+      width: 40vw;
+      height: auto;
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 3rem;
+      z-index: 2;
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      input {
+         width: 100%;
+         height: 42px;
+         margin: 3rem 0;
+         text-align: center;
+         // text-transform: uppercase;
+         font-size: 1.6rem;
+      }
+
+      button {
+         background-color: var(--rosa);
+         padding: 1.5rem 5rem;
+         color: #fff;
+         font-size: 1.6rem;
+      }
+
+      .error-block {
+         color: #cc0000;
+         font-size: 1.6rem;
+         margin-top: 2rem;
+         font-weight: 600;
+      }
+
+      .btn-close {
+         position: absolute;
+         right: 10px;
+         top: 10px;
+         cursor: pointer;
+      }
+   }
+}

@@ -1,0 +1,42 @@
+.page-lets-talk {
+
+   .col-filter {
+      grid-template-rows: 1.5fr 1fr 1.5fr !important;
+
+      @include notebooks {
+         grid-template-rows: 2fr 1fr 1fr !important;
+      }
+
+      @include phone {
+         grid-template-rows: .2fr 1fr .1fr !important;
+      }
+
+      .first-title {
+         margin-bottom: 6.9rem;
+         font-size: 4.5rem !important;
+         
+         @include notebooks {
+            margin-bottom: 3rem;
+         }
+      }
+   
+      .btn-buscar {
+         border: 1px solid #fff;
+         width: 27.5rem;
+         height: 5.4rem;
+         font-size: 2.2rem;
+         line-height: 2rem;
+         text-transform: lowercase;
+         margin-top: 7rem;
+         
+         @include notebooks {
+            margin-top: 3rem;
+         }
+         
+         &:hover {
+            background-color: var(--rosa);
+            border: 1px solid var(--rosa);
+         }
+      }
+   }
+}

@@ -1,0 +1,62 @@
+$break-xxs: 350px;
+$break-xs: 570px;
+$break-sm: 768px;
+$break-md: 992px;
+$break-lg: 1199px;
+$break-xg: 1399px;
+$break-xxg: 1920px;
+
+@mixin insert-animation($time) {
+   -webkit-transition: all $time ease-out;
+   -moz-transition: all $time ease-out;
+   -o-transition: all $time ease-out;
+   transition: all $time ease-out;
+}
+
+@mixin phonexxs {
+   @media (max-width: #{$break-xxs - 1}) {
+      @content;
+   }
+}
+
+@mixin phonexs {
+   @media (max-width: #{$break-xs - 1}) {
+      @content;
+   }
+}
+
+@mixin phone {
+   @media (max-width: #{$break-sm - 1}) {
+      @content;
+   }
+}
+
+@mixin tablet {
+   @media (max-width: #{$break-md - 1}) {
+      @content;
+   }
+}
+
+@mixin tabletPro {
+   @media (min-width: 768px) and (max-width: 1024px) {
+      @content;
+   }
+}
+
+@mixin small-desktop {
+   @media (min-width: #{$break-md - 1}) and (max-width: #{$break-lg - 1}) {
+      @content;
+   }
+}
+
+@mixin notebooks {
+   @media (min-width: #{$break-lg - 1}) and (max-width: #{$break-xg - 1}) {
+      @content;
+   }
+}
+
+@mixin full-desktop {
+   @media (min-width: #{$break-xg - 1}) {
+      @content;
+   }
+}

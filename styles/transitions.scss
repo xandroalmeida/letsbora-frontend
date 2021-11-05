@@ -1,0 +1,29 @@
+/* starting ENTER animation */
+.animatedImg-enter {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   opacity: 0.01;
+   transform: translateY(0%) scale(0.01);
+}
+
+/* ending ENTER animation */
+.animatedImg-enter-active {
+   opacity: 1;
+   transform: translateY(0%) scale(1);
+   transition: all 1000ms ease-in-out;
+}
+
+/* starting EXIT animation */
+.animatedImg-exit {
+   opacity: 1;
+   transform: scale(1.01);
+}
+
+/* ending EXIT animation */
+.animatedImg-exit-active {
+   opacity: 0;
+   transform: scale(4);
+   transition: all 1000ms ease-in-out;
+}

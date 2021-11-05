@@ -1,0 +1,269 @@
+.col-esq-bar {
+   width: 16.97%;
+   margin-right: 2%;
+
+   transition: all .3s ease-out;
+
+   &.hide-column {
+      width: 0 !important;
+      overflow: hidden;
+      margin: 0 !important;
+   }
+
+   @include phone {
+      width: 60vw;
+      margin-right: 0;
+   }
+
+   .box-fazer-intercambio, .box-ser-voluntario {
+      background-color: #2c2c33;
+      width: 100%;
+      height: 194px;
+      @extend %full-center;
+      color: #fff;
+      font-family: "Nazare";
+      font-weight: 500;
+      font-size: 2.2rem;
+      margin-top: 16px;
+      position: relative;
+
+      @include phone {
+         display: none;
+      }
+
+      span {
+         position: relative;
+         z-index: 1;
+      }
+   }
+
+   .box-fazer-intercambio {
+      .bg-image {
+         background-image: url('https://letsborafrontend.s3.amazonaws.com/assets/imgs/quero_fazer_intercambio.jpg');
+         background-position: center;
+         background-size: cover;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 0;
+         opacity: .4;
+      }
+   }
+   
+   .box-ser-voluntario {
+      .bg-image {
+         background-image: url('https://letsborafrontend.s3.amazonaws.com/assets/imgs/quero_ser_voluntario.jpg');
+         background-position: center;
+         background-size: cover;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 0;
+         opacity: .4;
+      }
+   }
+}
+
+.content-filtered {
+   width: 95%;
+   margin: 0 auto;
+
+   transition: all .3s ease-out;
+
+   &.open {
+      width: 81.03%;
+      padding-right: 30px;
+   }
+
+   @include phone {
+      width: 100%;
+      padding: 0 15px;
+   }
+
+   .banner-publicidade {
+      background-color: var(--rosa);
+      @extend %full-center;
+      height: 262px;
+      width: 100%;
+      font-size: 4rem;
+      font-weight: 600;
+      margin-bottom: 8rem;
+
+      @include phone {
+         height: 146px;
+         text-align: center;
+         margin: 30px 0;
+      }
+   }
+
+   .btn-personalize {
+      @extend %full-center;
+      width: calc(100% - 150px);
+      height: 90px;
+      margin: 0 auto 8rem;
+      font-size: 2.2rem;
+      cursor: pointer;
+      transition: all .3s ease-out;
+
+      @include phone {
+         width: calc(100% - 50px);
+         text-align: center;
+      }
+
+      &:hover {
+         background-color: var(--gray);
+         color: white;
+         border: none;
+      }
+   }
+}
+
+.grid-experiencias {
+   display: grid;
+   grid-template-columns: 2fr 2fr 1.3fr;
+   // grid-template-columns: repeat(3, 1fr);
+   column-gap: 24px;
+
+   &.template1 {
+      grid-template-columns: 2fr 2fr 1.3fr;
+
+      @include phone {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+
+         a:nth-child(1) {
+            width: 100%;
+         }
+         
+         a:nth-child(2) {
+            width: 40%;
+         }
+
+         a:nth-child(3) {
+            width: 53%;
+         }
+      }
+
+      @include phonexxs {
+         display: flex;
+         flex-wrap: wrap;
+
+         a {
+            width: 100% !important;
+         }
+      }
+   }
+
+   &.template2 {
+      grid-template-columns: 2fr 1.3fr 2fr;
+
+      @include phone {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+
+         a:nth-child(1) {
+            width: 53%;
+         }
+         
+         a:nth-child(2) {
+            width: 40%;
+         }
+
+         a:nth-child(3) {
+            width: 100%;
+         }
+      }
+
+      @include phonexxs {
+         display: flex;
+         flex-wrap: wrap;
+
+         a {
+            width: 100% !important;
+         }
+      }
+   }
+
+   &.template3 {
+      grid-template-columns: 1.3fr 2fr 2fr;
+
+      @include phone {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+
+         a:nth-child(1) {
+            width: 100%;
+         }
+         
+         a:nth-child(2) {
+            width: 53%;
+         }
+
+         a:nth-child(3) {
+            width: 40%;
+         }
+      }
+
+      @include phonexxs {
+         display: flex;
+         flex-wrap: wrap;
+
+         a {
+            width: 100% !important;
+         }
+      }
+   }
+
+   .item-experiencia {
+      width: 100%;
+      height: auto;
+      margin-bottom: 4.5rem;
+      overflow: hidden;
+
+      &:hover {
+         img {
+            transform: scale(1.1);
+         }
+
+         h3, p {
+            color: var(--rosa);
+         }
+      }
+
+      .thumb-experiencia {
+         width: 100%;
+         height: 28.9rem;
+         overflow: hidden;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: all ease-out .3s;
+         }
+      }
+
+      .post-meta {
+         padding-left: 8px;
+         
+   
+         h3 {
+            margin: 1.4rem 0;
+            font-size: 1.9rem;
+         }
+
+         p {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300;
+         }
+      }
+   }
+}

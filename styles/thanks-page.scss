@@ -1,0 +1,70 @@
+.thanks-page {
+   h2.title {
+      color: var(--rosa);
+      font-size: 6rem;
+      font-weight: 600;
+      font-family: "Nazare";
+      max-width: 425px;
+      margin: 0 auto 6rem;
+
+      @include phone {
+         margin-top: 30px;
+      }
+   }
+
+   .detalhes-compra {
+      border-bottom: solid 1px var(--rosa);
+      padding-bottom: 1.5rem;
+      margin-bottom: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3.subtitle, h4 {
+         color: var(--rosa);
+      }
+
+      h4 {
+         font-size: 2rem;
+         
+         span {
+            color: #ccc;
+         }
+      }
+   }
+
+   .email-warning {
+      color: #fff;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+      margin: 6rem 0;
+   }
+
+   .btn-meus-pedidos {
+      border: 1px solid #fff;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      margin: 0 auto;
+      max-width: 25rem;
+      font-size: 2rem;
+
+      &:hover {
+         background-color: var(--rosa);
+      }
+   }
+
+   .icon-lets-bora {
+      width: 61px;
+      height: 64px;
+      margin: 9rem auto 3rem;
+
+      img {
+         width: 100%;
+         height: auto;
+      }
+   }
+}

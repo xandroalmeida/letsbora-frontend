@@ -1,0 +1,160 @@
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 3.5rem 0;
+   z-index: 5000;
+
+   transition: all ease-out .3s;
+
+   &.bgFilled {
+      background-color: var(--gray);
+   }
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+   }
+
+   .logo-header {
+      width: 289px;
+      margin: 0 auto 0 0;
+      position: relative;
+      cursor: pointer;
+
+      @include phone { 
+         width: 70%;
+
+         img {
+            width: 100%;
+            height: auto;
+         }
+      }
+   }
+
+   nav {
+      width: 70%;
+
+      @include phone {
+         position: fixed;
+         top: 0;
+         right: -1000px;
+         height: 100vh;
+         background-color: var(--gray);
+         transition: all ease-out .3s;
+         z-index: 2;
+         border-left: 1px solid #fff;
+
+         .header-nav {
+            height: 60px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            padding: 15px;
+         }
+      }
+
+      &.open {
+         @include phone {
+            right: 0;
+            
+            transition: all ease-out .3s;
+         }  
+      }
+
+      ul {
+         display: flex;
+         justify-content: flex-end;
+         align-items: center;
+
+         @include phone { 
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+         }
+
+         li {
+            padding: 0 2rem;
+
+            @include phone { 
+               padding: 0 15px;
+               width: 100%;
+            }
+            
+            a {
+               color: #fff;
+               font-size: 1.5rem;
+               font-weight: 300;
+               cursor: pointer;
+
+               &:hover {
+                  text-decoration: none;
+                  color: var(--rosa);
+               }
+
+               @include notebooks {
+                  font-size: 1.7rem;
+               }
+
+               @include phone { 
+                  font-size: 15px;
+                  border-bottom: 1px solid #fff;
+                  width: 100%;
+                  margin-bottom: 10px;
+                  display: block;
+                  padding-bottom: 10px;
+               }
+            }
+
+            .fab,.fas {
+               color: #fff;
+               cursor: pointer;
+
+               &:hover {
+                  color: var(--rosa);
+               }
+            }
+   
+            &:first-child {
+               padding-left: 0;
+
+               @include phone { 
+                  padding-left: 15px;
+               }
+            }
+
+            &:last-child {
+               @include phone { 
+                  a {
+                     border-bottom: none;
+                  }
+               }
+            }
+
+            &.instagram {
+               padding-left: 4rem;
+
+               @include phone { 
+                  padding-left: 15px;
+               }
+            }
+         }
+      }
+   }
+
+   .icon-menu {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      z-index: 1;
+   }
+}
+
+.header-fixed {
+   background-color: var(--gray);
+
+   transition: all ease-out .3s;
+}

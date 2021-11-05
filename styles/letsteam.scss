@@ -1,0 +1,218 @@
+.quem-somos {
+   &.section {
+      padding: 20rem 0 15rem;
+   }
+
+   .container {
+      position: relative;
+   }
+
+   h2 {
+      margin-bottom: 6rem;
+      position: relative;
+      z-index: 1;
+   }
+
+   .txt-quem-somos {
+      max-width: 664px;
+
+      p {
+         margin-bottom: 4rem;
+      }
+   }
+
+   .square-rosa {
+      background-color: var(--rosa);
+      width: 378px;
+      height: 267px;
+      display: block;
+      position: absolute;
+      right: 50px;
+      top: -150px;
+      z-index: 0;
+
+      @include phone {
+         width: 30%;
+         height: 100px;
+         right: 0;
+         top: -110px;
+      }
+   }
+
+   .gallery-imgs {
+      ul {
+         display: grid;
+         grid-template-columns: 1fr .7fr 1fr;
+         column-gap: 2.5rem;
+
+         @include phone {
+            display: block;
+         }
+
+         li {
+            width: 100%;
+            height: 289px;
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+      }
+   }
+}
+
+.lets-team {
+   margin-bottom: 12rem;
+   position: relative;
+
+   &::before {
+      content: '';
+      background-color: var(--rosa);
+      width: 100%;
+      height: 575px;
+      display: block;
+      position: absolute;
+      top: 5.4%;
+      left: 0;
+
+      @include phone {
+         height: 400px;
+         top: 27px;
+      }
+   }
+
+   h2 {
+      margin-bottom: 9.8rem;
+      position: relative;
+
+      @include phone {
+         margin-bottom: 40px;
+      }
+   }
+
+   .container {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      @include phone {
+         display: block;
+      }
+
+      .col-team {
+
+         @include phone {
+            margin-bottom: 30px;
+         }
+
+         &:first-child {
+            margin-right: 128px;
+
+            @include phone {
+               margin-right: 0;
+            }
+         }
+
+         h3 {
+            font-size: 4rem;
+            margin-top: 6.5rem;
+            margin-bottom: 3.6rem;
+         }
+
+         h5 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.6rem;
+            color: var(--rosa);
+            margin-bottom: 5rem;
+         }
+
+         img {
+            @include phone {
+               width: 100%;
+               height: auto;
+            }
+         }
+      }
+   }
+}
+
+.parceiros {
+   h2 {
+      margin-bottom: 10rem;
+   }
+
+   ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      li {
+
+         @include phone {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 4rem;
+
+            &:nth-child(1), &:nth-child(3) {
+               h3 {
+                  margin-top: -3.5rem;
+               }
+            }
+
+            &:nth-child(2) {
+               margin-top: 3rem;
+            }
+         }
+
+         a {
+            font-size: 1.6rem;
+            text-align: center;
+            cursor: pointer;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: "Open Sans", sans-serif;
+   
+            @include phone {
+               width: 50%;
+            }
+         }
+
+         .logo {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+            
+            img {
+               display: block;
+               max-width: 100%;
+               max-height: 100%;
+            }
+         }
+
+         h3 {
+            font-size: 2.2rem;
+         }
+      }
+   }
+}
+
+.gallery-imgs {
+   margin-top: 6rem;
+}
+
+.bg-lets-team {
+   img {
+      width: 100%;
+      height: auto;
+   }
+}

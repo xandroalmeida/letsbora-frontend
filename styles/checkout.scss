@@ -1,0 +1,256 @@
+.checkout {
+   h2.title {
+      margin-top: 0;
+
+      @include phone {
+         margin-top: 30px;
+      }
+   }
+
+   .grid-checkout {
+      color: #fff;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: 
+         'formulario resumo'
+         'dadospagamento resumo '
+      ;
+      column-gap: 6rem;
+      position: relative;
+
+      @include phone {
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(3, auto);
+         grid-template-areas: 
+            'formulario'
+            'dadospagamento'
+            'resumo'
+         ;
+      }
+
+      h3.subtitle {
+         color: var(--rosa);
+         border-bottom: solid 1px var(--rosa);
+         padding-bottom: 1.5rem;
+         margin-bottom: 3rem;
+      }
+
+      .form-checkout {
+         grid-area: formulario;
+      }
+
+      .form-resume-purchase {
+         grid-area: resumo;
+         position: sticky;
+         position: -webkit-sticky;
+         top: 100px;
+         align-self: start;
+
+         @include phone {
+            position: static;
+            top: 0;
+            margin-top: 15px;
+         }
+
+         .btn-finalizar {
+            display: block;
+            background-color: var(--rosa);
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            font-size: 2.2rem;
+            border: none;
+            width: 100%;
+            color: #fff;
+            font-family: 'Nazare';
+
+            &:hover {
+               background-color: var(--rosa-hover);
+            }
+         }
+
+         p.condicoes {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 500;
+         }
+      }
+
+      .form-card-information {
+         grid-area: dadospagamento;
+         margin-top: 3rem;
+      }
+   }
+}
+
+.box-itens-checkout {
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   padding: 30px;
+
+   @include phone {
+      padding: 30px 15px;
+   }
+
+   .row-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 12px;
+
+      .col-left {
+         max-width: 65%;
+         @include phone {
+            max-width: 60%;
+         }
+      }
+
+      .col-right {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+
+         .parcelamento {
+            text-align: right;
+         }
+      }
+      
+      h3 {
+         color: #fff;
+      }
+
+      p {
+         color: #fff;
+      }
+
+      .sub-total {
+         color: var(--rosa);
+         font-size: 16px;
+         font-weight: 600;
+      }
+   }
+
+   .box-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+
+      span {
+         color: var(--rosa);
+      }
+   }
+   
+   .box-parcelamento {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-top: 1.5rem;
+
+      .box-select {
+         background-color: var(--rosa);
+         overflow: hidden;
+         position: relative;
+
+         i {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+         }
+         
+         select {
+            background: transparent;
+            color: white;
+            border: none;
+            width: 110%;
+            padding: 1rem 3rem 1rem 2rem;
+
+            option {
+               color: #000;
+            }
+         }
+
+      }
+   }
+
+   .box-cupom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+
+      span {
+         color: var(--rosa);
+      }
+   }
+
+}
+
+.loading-gateway {
+   .loading {
+      height: 80px;
+
+      img {
+         height: 100%;
+      }
+   }
+
+   h4 {
+      color: #fff;
+      text-align: center;
+      font-size: 1.8rem;
+   }
+}
+
+.error_block {
+   color: var(--rosa);
+   font-size: 1.6rem;
+}
+
+.input-error {
+   background-color: #ffe1e1;
+   border: solid 1px #cc0000 !important;
+}
+
+.txt-error-resp-gateway {
+   color: var(--rosa);
+   font-size: 1.6rem;
+   font-weight: 500;
+   text-align: center;
+   margin-top: 15px;
+}
+
+.cupom-algum {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 1rem;
+   font-size: 1.6rem;
+   cursor: pointer;
+
+   &:hover {
+      color: var(--rosa);
+      text-decoration: underline;
+   }
+}
+
+.text-pix {
+   font-size: 1.6rem;
+   color: #fff;
+   margin-top: 2rem;
+   font-weight: 500;
+}
+

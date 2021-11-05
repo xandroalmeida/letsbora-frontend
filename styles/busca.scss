@@ -1,0 +1,18 @@
+.container-filter-used {
+   background-color: var(--rosa);
+   padding: 3rem;
+   margin-bottom: 6rem;
+
+   h3 {
+      color: #fff;
+      margin-bottom: 2rem;
+   }
+
+   .row-filters-used {
+      display: flex;
+
+      div.box-filter-used {
+         margin-right: 6rem;
+      }
+   }
+}
