@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import ImageContainer from '../ImageContainer';
-import {pathsMenu} from '../../utils/routes';
+import { pathsMenu } from '../../utils/routes';
 import IconCart from '../IconCart';
 import { checkLogin, logoutAction } from '../../utils/auth';
 
@@ -35,7 +35,7 @@ function Header(props) {
 
    return (
       <header>
-         <div className={`header ${props.classAdd ? props.classAdd:''}  ${fixedMenu ? 'header-fixed' : ''}`}>
+         <div className={`header ${props.classAdd ? props.classAdd : ''}  ${fixedMenu ? 'header-fixed' : ''}`}>
             <div className="container">
                <div className="icon-menu hidden-desktop" onClick={() => setOpenMenu(true)}>
                   <ImageContainer src="/assets/imgs/icon_menu.svg" alt="Ícone menu" width="39" height="24"></ImageContainer>
@@ -84,7 +84,7 @@ function Header(props) {
                         </Link>
                      </li>
                      {isLoggedIn && <li>
-                        <a onClick={()=>logoutAction()} title="logout"><i className="fas fa-sign-out-alt"></i></a>
+                        <a onClick={() => logoutAction()} title="logout"><i className="fas fa-sign-out-alt"></i></a>
                      </li>}
                   </ul>
 

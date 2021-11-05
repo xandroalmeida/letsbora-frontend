@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {pathsMenu} from '../../utils/routes';
+import { pathsMenu } from '../../utils/routes';
 
 function Hero() {
    return (

@@ -13,8 +13,8 @@ function Carousel(props) {
       infinite: true,
       speed: 500,
       initialSlide: 0,
-      slidesToShow: props.totalShow ? props.totalShow:3,
-      slidesToScroll: props.totalShow ? props.totalShow:3,
+      slidesToShow: props.totalShow ? props.totalShow : 3,
+      slidesToScroll: props.totalShow ? props.totalShow : 3,
       centerPadding: "60px",
       responsive: [
          {
@@ -48,11 +48,12 @@ function Carousel(props) {
       <>
          <Slider {...settings}>
             {props.items && props.items.map(item => {
-               contador ++;
+               contador++;
+               const title = item.title ?? "Intercâmbio";
                return (
                   <div key={`item-${contador}`} className="slide">
-                     {props.animated && <ImageContainerAnimated src={`${item.thumb}`} alt="Intercâmbio" />}
-                     {!props.animated && <ImageContainer src={`${item.thumb}`} alt="Intercâmbio" />}
+                     {props.animated && <ImageContainerAnimated src={`${item.thumb}`} alt={`${title}`} title={`${title}`} />}
+                     {!props.animated && <ImageContainer src={`${item.thumb}`} alt={`${title}`} title={`${title}`} />}
                   </div>
                );
             })}

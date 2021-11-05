@@ -43,7 +43,7 @@ function SectionExperiencias() {
 
    let interval = null;
 
-   useEffect(()=>{
+   useEffect(() => {
       randomizeThumbs(0);
       interval = setInterval(() => {
          randomizeThumbs(1);
@@ -52,12 +52,12 @@ function SectionExperiencias() {
       return () => {
          clearInterval(interval);
       }
-   },[]);
+   }, []);
 
    function randomizeThumbs(animated) {
       const categories = randomCategories();
-      
-      const thumbsToLoad = categories.map((categoria)=>{
+
+      const thumbsToLoad = categories.map((categoria) => {
          const elementImages = itensCarouselExperiencias[categoria];
          const ramdomImage = Math.floor(Math.random() * elementImages.length);
          return elementImages[ramdomImage];
@@ -68,21 +68,21 @@ function SectionExperiencias() {
    }
 
    function randomCategories() {
-      const res = arrCategories.sort(function() {
+      const res = arrCategories.sort(function () {
          return 0.5 - Math.random();
       });
 
-      return res.slice(res,3);
+      return res.slice(res, 3);
    }
 
 
    return (
       <section className="section experiencia">
          <div className="container">
-            <h2>Experiências de Viagem</h2>
-            <p className="linhaFina">Uma nova forma de viajar, explorar e conectar!  Descubra a África do Sul através de experiências exclusivas, customizadas para o seu estilo de vida e viagem, com aquela pitada de emoção e verdade que só os locais conhecem.</p>
+            <h2>Experiências de Viagem à África do Sul</h2>
+            <p className="linhaFina">Uma nova forma de viajar, explorar e conectar! Monte o seu <Link href={pathsMenu.expPersonalizar}>roteiro de viagem para a África do Sul</Link> com experiências exclusivas, customizadas para o seu estilo de vida, com aquela pitada de emoção e verdade que só os locais conhecem.</p>
             <div className="content-carousel">
-               {thumbsLoad && <Carousel items={thumbsLoad} animated={animated} /> }
+               {thumbsLoad && <Carousel items={thumbsLoad} animated={animated} />}
             </div>
             <Link href={pathsMenu.expPersonalizar}>personalizar minha experiência</Link>
          </div>

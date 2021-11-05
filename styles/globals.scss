@@ -253,6 +253,19 @@ h2.title {
       }
    }
 
+   p > a {
+      border: inherit;
+      padding: 0;
+      font-size: inherit;
+      font-weight: inherit;
+      font-family: inherit;
+      &:hover {
+         background-color: var(--gray);
+         color: #fff;
+         border: none;
+      }
+   }
+
    a {
       @extend %btn-default;
 
