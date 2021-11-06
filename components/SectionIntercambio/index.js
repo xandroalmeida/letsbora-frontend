@@ -21,7 +21,7 @@ function SectionIntercambio() {
    return (
       <section className="section intercambio">
          <div className="container">
-            <h2>Intercâmbio: África do Sul</h2>
+            <h2>Intercâmbio na África do Sul</h2>
             <p className="linhaFina">Considerado o melhor destino mundial para brasileiros que buscam estudar Inglês, a África do Sul reúne praias, montanhas, gastronomia, cultura jovem, badalação e câmbio favorável.</p>
             <p className="linhaFina">Tudo em um só lugar!</p>
             <br />

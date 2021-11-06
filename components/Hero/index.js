@@ -5,7 +5,7 @@ function Hero() {
    return (
       <div className="hero">
          <div className="content-hero">
-            <h2>Aproximando pessoas e proporcionando experiências inesquecíveis.</h2>
+            <h1>Aproximando pessoas e proporcionando experiências inesquecíveis.</h1>
             <Link href={pathsMenu.experiencias}>explorar experiências</Link>
          </div>
       </div>
