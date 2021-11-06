@@ -402,6 +402,12 @@ h2.title {
    }
 }
 
+.body-interna > h1 {
+   text-align: center;
+   font-size: 5rem;
+   margin-bottom: 5rem;
+}
+
 .btn-vazado {
    @extend %btn-default;
    font-family: "Open Sans", sans-serif;

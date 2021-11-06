@@ -103,7 +103,7 @@ function Experiencia() {
       const value = e.currentTarget.value;
       console.log('value', value);
       clearInterval(timerSearchText);
-      timerSearchText = setInterval(()=>{
+      timerSearchText = setInterval(() => {
          clearInterval(timerSearchText);
          fetchExperiencesByTerm(value);
       }, 1000);
@@ -142,21 +142,26 @@ function Experiencia() {
    }
 
    return (
-      <PageInterna1>
+      <PageInterna1
+         title="O que fazer na África do Sul | Let’s Bora"
+         description="Aproximando pessoas e proporcionando experiências inesquecíveis. O Let’s Bora traz dicas de quais são as melhores experiências para você curtir a África do Sul.">
+
          <section className="body-interna">
+            <h1>O que fazer na África do Sul?</h1>
+            <p class="linhaFina">Está com dúvidas sobre o seu roteiro de viagem para à África do Sul? Com a Let’s Bora, você tem acesso a experiências exclusivas, customizadas para o seu estilo de vida e com aquela pitada de emoção e verdade. Passeios gastronômicos, eventos cheios de adrenalina e até voos de helicóptero. Escolha os seus e faça parte da cultura sul-africana.</p>
             <div className="search-text">
                <input type="text" name="search" placeholder="ENCONTRE AQUI A SUA EXPERIENCIA" onChange={setTimerSearchText} />
                <div className="actions">
-                  <div className="btn-close" onClick={()=>cleanSearchTerm()}>
+                  <div className="btn-close" onClick={() => cleanSearchTerm()}>
                      <i className="fas fa-times"></i>
                   </div>
                </div>
-               <div className="filter-advanced" onClick={()=>setShowMaisFiltros(!showMaisFiltros)}>
+               <div className="filter-advanced" onClick={() => setShowMaisFiltros(!showMaisFiltros)}>
                   <i className="fas fa-sliders-h"></i> Ver mais filtros
                </div>
             </div>
             <div className="row-height-notequal">
-               <div className={`col-esq-bar ${showMaisFiltros ? '':'hide-column'}`}>
+               <div className={`col-esq-bar ${showMaisFiltros ? '' : 'hide-column'}`}>
                   <FilterBar />
                   <Link href={pathsMenu.intercambio}>
                      <a className="box-fazer-intercambio">
@@ -171,7 +176,7 @@ function Experiencia() {
                      </a>
                   </Link>
                </div>
-               <div className={`content-filtered ${showMaisFiltros ? 'open':''}`}>
+               <div className={`content-filtered ${showMaisFiltros ? 'open' : ''}`}>
                   {/* <div className="banner-publicidade">
                      BANNER DE ANUNCIO DIRECIONADO
                   </div> */}
