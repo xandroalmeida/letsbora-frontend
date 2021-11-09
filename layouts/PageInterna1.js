@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-function PageInterna1({ children, title, description }) {
+function PageInterna1({ children, title, description, customFooter }) {
 
    return (
       <>
@@ -15,7 +15,7 @@ function PageInterna1({ children, title, description }) {
          <main>
             {children}
          </main>
-         <Footer />
+         <Footer customFooter={customFooter} />
       </>
    );
 }

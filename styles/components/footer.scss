@@ -3,6 +3,10 @@
    width: 100%;
    padding: 7rem 0 4rem;
 
+   h3 {
+      color: #fff;
+      margin-top: 2rem;;
+   }
    .copyright {
       // border-top: 1px solid #fff;
       margin-top: 3rem;
@@ -78,6 +82,7 @@
 
       .col-esq {
          width: 46.4rem;
+         margin-right: 1rem;
 
          .info-empresa {
 
@@ -92,7 +97,7 @@
             justify-content: space-between;
 
             .info-empresa {
-               width: 60%;
+               width: 80%;
             }
 
             ul.explore {

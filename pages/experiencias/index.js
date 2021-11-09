@@ -141,16 +141,22 @@ function Experiencia() {
       fetchExperiences();
    }
 
+   const customFooter = {
+      title: "Tudo sobre a África do Sul",
+      content: "O que você procura? Safáris? Rotas de vinhos? Praias? Passeios culturais? Museus históricos? Delícias gastronômicas? Com a comunidade Let’s Bora você tem tudo isso! Um roteiro de viagem à África do Sul pode e deve estar cheio de atrativos para você e a sua família curtirem bastante. Um país para se deslumbrar nas quatro estações do ano com todas as suas belezas naturais e curiosidades."
+   }
+
    return (
       <PageInterna1
          title="O que fazer na África do Sul | Let’s Bora"
-         description="Aproximando pessoas e proporcionando experiências inesquecíveis. O Let’s Bora traz dicas de quais são as melhores experiências para você curtir a África do Sul.">
-
+         description="Aproximando pessoas e proporcionando experiências inesquecíveis. O Let’s Bora traz dicas de quais são as melhores experiências para você curtir a África do Sul."
+         customFooter={customFooter}>
          <section className="body-interna">
             <h1>O que fazer na África do Sul?</h1>
             <p class="linhaFina">Está com dúvidas sobre o seu roteiro de viagem para à África do Sul? Com a Let’s Bora, você tem acesso a experiências exclusivas, customizadas para o seu estilo de vida e com aquela pitada de emoção e verdade. Passeios gastronômicos, eventos cheios de adrenalina e até voos de helicóptero. Escolha os seus e faça parte da cultura sul-africana.</p>
+            <h2>Encontre aqui a sua experiência</h2>
             <div className="search-text">
-               <input type="text" name="search" placeholder="ENCONTRE AQUI A SUA EXPERIENCIA" onChange={setTimerSearchText} />
+               <input type="text" name="search" placeholder="O QUE VOCÊ PROCURA?" onChange={setTimerSearchText} />
                <div className="actions">
                   <div className="btn-close" onClick={() => cleanSearchTerm()}>
                      <i className="fas fa-times"></i>

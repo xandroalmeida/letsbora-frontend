@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ImageContainer from '../ImageContainer';
 import { pathsMenu } from '../../utils/routes';
 
-function Footer() {
+function Footer({ customFooter }) {
 
    return (
       <footer>
@@ -13,7 +13,10 @@ function Footer() {
                   <div className="col-esq">
                      <div className="info-empresa">
                         <ImageContainer src="/assets/imgs/logo_letsbora_white.svg" alt="Let's Bora" />
-                        <p>Somos uma plataforma de conteúdo, conexão e experiências de viagens, customizadas para o perfil de cada viajante. Não pretendemos ser uma agência de viagens! Somos uma comunidade que conecta pessoas, lugares e momentos.</p>
+
+                        {!customFooter && <p>Somos uma plataforma de conteúdo, conexão e experiências de viagens, customizadas para o perfil de cada viajante. Não pretendemos ser uma agência de viagens! Somos uma comunidade que conecta pessoas, lugares e momentos.</p>}
+                        {customFooter && <h3>{customFooter.title}</h3>}
+                        {customFooter && <p>{customFooter.content}</p>}
                         <ul className="hidden-mobile">
                            <li><a href="https://www.facebook.com/letsborabr" target="_blank"><i className="fab fa-facebook-f"></i></a></li>
                            <li><a href="https://twitter.com/letsborabr" target="_blank"><i className="fab fa-twitter"></i></a></li>
@@ -21,32 +24,9 @@ function Footer() {
                            <li><a href="https://www.linkedin.com/company/let-s-bora" target="_blank"><i className="fab fa-linkedin-in"></i></a></li>
                         </ul>
                      </div>
-
-                     <ul className="explore hidden-desktop">
-                        <h3>Explore</h3>
-                        <li>
-                           <Link href={pathsMenu.experiencias}>
-                              <a>Experiences</a>
-                           </Link>
-                        </li>
-                        <li>
-                           <Link href={pathsMenu.sobre}>
-                              <a>Let's Team</a>
-                           </Link>
-                        </li>
-                        <li>
-                           <Link href={pathsMenu.blog}>
-                              <a>Blog</a>
-                           </Link>
-                        </li>
-                        <li>
-                           <Link href={pathsMenu.contato}>
-                              <a>Let's Talk</a>
-                           </Link>
-                        </li>
-                     </ul>
                   </div>
                   <div className="col-dir">
+
                      <ul className="hidden-mobile">
                         <h3>Explore</h3>
                         <li>
