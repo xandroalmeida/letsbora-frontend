@@ -35,7 +35,7 @@ function AgendaComprar(props) {
          console.log('priceData.length', priceData.length);
          if (action === 'minus') {
             newAdults--;
-            
+
             if (newAdults < firstKey) newAdults = firstKey;
          }
          else {
@@ -63,7 +63,7 @@ function AgendaComprar(props) {
       console.log('expInfoData', expInfoData);
       console.log('priceData', priceData);
 
-      const subtotalAdults = priceData[totalAdults] ? priceData[totalAdults].price:(expInfoData.priceDefaultAdult*totalAdults); // se nao foi cadastrada a quantidade certa dos adultos, eu pego o preço por adulto padrão e multiplico pela quantidade de adultos
+      const subtotalAdults = priceData[totalAdults] ? priceData[totalAdults].price : (expInfoData.priceDefaultAdult * totalAdults); // se nao foi cadastrada a quantidade certa dos adultos, eu pego o preço por adulto padrão e multiplico pela quantidade de adultos
       const subtotalKids = totalKids * priceKids;
       const totalToShow = subtotalAdults + subtotalKids;
 
@@ -74,8 +74,7 @@ function AgendaComprar(props) {
    *  action = 1 = adiciona produto ao carrinho e redireciona automaticamente para o checkout
    */
    function addToCart(action) {
-      if(selectedDay)
-      {
+      if (selectedDay) {
          const objAddToCart = {
             idexperiencias: expInfoData.idexperiencias,
             name: expInfoData.name,
@@ -84,16 +83,16 @@ function AgendaComprar(props) {
             total,
             selectedDay
          };
-   
+
          console.log('props.cart', props.cart);
          const newCart = [...props.cart];
          newCart.push(objAddToCart);
-   
+
          console.log('newCart', newCart);
-   
+
          props.onCartData(newCart);
          cookie.set(config.cookieCart, JSON.stringify(newCart), { expires: 90 });
-   
+
          if (action) {
             Router.push({
                pathname: pathsMenu.checkout
@@ -109,7 +108,7 @@ function AgendaComprar(props) {
    }
 
    return (
-      <div className="wrap-content">
+      <div className="wrap-content-calendar">
          <div className="gallery-imgs-exp-others">
             <div className="container-agendamento">
                <div className="header-agendamento">
@@ -152,10 +151,10 @@ function AgendaComprar(props) {
                      <span className="qty-compras">{totalAdults} adultos e {totalKids} crianças</span>
                      {selectedDay && <span className="dia-escolhido">Dia escolhido: {selectedDay.toLocaleDateString()}</span>}
 
-                     <a className={`add-cart ${selectedDay?'':'disabled'}`} onClick={() => addToCart(0)}>adicionar ao carrinho</a>
+                     <a className={`add-cart ${selectedDay ? '' : 'disabled'}`} onClick={() => addToCart(0)}>adicionar ao carrinho</a>
 
 
-                     <a className={`btn-checkout ${selectedDay?'':'disabled'}`} onClick={() => addToCart(1)}>fechar a compra</a>
+                     <a className={`btn-checkout ${selectedDay ? '' : 'disabled'}`} onClick={() => addToCart(1)}>fechar a compra</a>
                      {errorDataNotSelected && !selectedDay && <span className="error-message">Selecione uma data para continuar</span>}
 
                   </div>

@@ -17,7 +17,7 @@ import { currencyFormat } from '../../utils/utils';
 
 function ExperienciaDetalhe() {
 
-   const [showCalendar, setShowCalendar] = useState(null);
+   const [showCalendar, setShowCalendar] = useState(true);
    const [expInfoData, setExpInfoData] = useState(null);
    const [mainGalleryObj, setMainGalleryObj] = useState(null);
    const [mainGallery2Obj, setMainGallery2Obj] = useState(null);
@@ -48,8 +48,7 @@ function ExperienciaDetalhe() {
    }, []);
 
    useEffect(() => {
-      if(slug)
-      {
+      if (slug) {
          fetchExperiencia();
          setMainGalleryObj(null);
          setMainGallery2Obj(null);
@@ -58,7 +57,7 @@ function ExperienciaDetalhe() {
             left: 0,
             behavior: 'smooth'
          });
-      }      
+      }
    }, [slug]);
 
    useEffect(() => {
@@ -96,8 +95,7 @@ function ExperienciaDetalhe() {
    }
 
    function organizeImagesMainGallery(obj) {
-      if(obj && obj.mediasIdmedias)
-      {
+      if (obj && obj.mediasIdmedias) {
          const mainGalleryObjTemp = obj.mediasIdmedias.map((item) => {
             if (item.type === "gallery-image") {
                return {
@@ -105,15 +103,15 @@ function ExperienciaDetalhe() {
                   name: obj.name
                }
             }
-   
+
             return null;
          });
-   
+
          const filterMainGalleryObj = mainGalleryObjTemp.filter(function (el) {
             return el != null;
          });
          setMainGalleryObj(filterMainGalleryObj);
-   
+
          const mainGallery2Obj = obj.mediasIdmedias.map((item) => {
             if (item.type === "gallery-image2") {
                return {
@@ -121,10 +119,10 @@ function ExperienciaDetalhe() {
                   name: obj.name
                }
             }
-   
+
             return null;
          });
-   
+
          const filterMainGallery2Obj = mainGallery2Obj.filter(function (el) {
             return el != null;
          });
@@ -171,19 +169,26 @@ function ExperienciaDetalhe() {
    }
 
    function showCalendarChooseDate(stt) {
-      if(stt) {
+      //Vamos Sempre mostrar o caelndario de agendamento e compra ;-)
+      /*
+      if (stt) {
          setShowCalendar(true);
-         width < 768 && document.body.classList.add('remove-scroll');
          return;
       }
-
       setShowCalendar(false);
-      width < 768 && document.body.classList.remove('remove-scroll');
+      */
+   }
 
+   const customFooter = {
+      title: "Tudo sobre a África do Sul",
+      content: "O que você procura? Safáris? Rotas de vinhos? Praias? Passeios culturais? Museus históricos? Delícias gastronômicas? Com a comunidade Let’s Bora você tem tudo isso! Um roteiro de viagem à África do Sul pode e deve estar cheio de atrativos para você e a sua família curtirem bastante. Um país para se deslumbrar nas quatro estações do ano com todas as suas belezas naturais e curiosidades."
    }
 
    return (
-      <PageInterna1>
+      <PageInterna1
+         title="O que fazer na África do Sul | Let’s Bora"
+         description="Aproximando pessoas e proporcionando experiências inesquecíveis. O Let’s Bora traz dicas de quais são as melhores experiências para você curtir a África do Sul."
+         customFooter={customFooter}>
          {loading && <div className="load-full-page"><Loading /></div>}
          {expInfoData &&
             <>
@@ -197,13 +202,13 @@ function ExperienciaDetalhe() {
                            <a href="#comprar-agora" className="box-price">
                               <div className="txt-comprar-agora">
                                  comprar agora
-                        </div>
+                              </div>
                               <div className="box-promo">
                                  R$ {expInfoData.priceDefaultAdult}
                               </div>
                               <div className="parcelamento">
                                  3x no cartão de crédito
-                        </div>
+                              </div>
                            </a>
                         </div>
                      </div>
@@ -211,7 +216,7 @@ function ExperienciaDetalhe() {
                   <div className="gallery-experiencias">
                      {mainGalleryObj && <CarouselExperiencia items={mainGalleryObj} totalShow={mainGalleryObj.length} />}
                   </div>
-                  <FeaturesExp 
+                  <FeaturesExp
                      expInfoData={expInfoData}
                      jsonRestrictionsList={jsonRestrictionsList}
                      jsonIncludedList={jsonIncludedList}
@@ -237,7 +242,7 @@ function ExperienciaDetalhe() {
                            </div>
                         </div>
                      </div>
-                     {!showCalendar && <div className="wrap-content">
+                     {true && <div className="wrap-content">
                         <div className="gallery-imgs-exp-others">
                            {mainGallery2Obj && mainGallery2Obj.length > 0 && <Carousel items={mainGallery2Obj} totalShow={mainGallery2Obj.length > 3 ? 3 : mainGallery2Obj.length} />}
                            {mainGallery2Obj && mainGallery2Obj.length === 0 && <div className="spacer-fake"></div>}
