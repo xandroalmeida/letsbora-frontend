@@ -255,9 +255,9 @@ function ExperienciaDetalhe() {
                         <ul>
                            {arrDaysSchedule && arrDaysSchedule.map((item) => {
                               return <li key={`item-${expInfoData.idexperiencias}-${item.thumb}`}>
-                                 <img src={`${config.urlS3}assets/uploads/${expInfoData.idexperiencias}/${item.thumb}`} alt={`Dia ${item.day}`} />
+                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/sQPXvtJQ9p4?controls=0&autoplay=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                  {!item.dayLabel && <div className="info-day">
-                                    <h3>Dia {item.day}</h3>
+                                    <h3>Como será sua experiencia</h3>
                                     {ReactHtmlParser(item.description)}
                                  </div>}
                                  {item.dayLabel && <div className="info-day">
