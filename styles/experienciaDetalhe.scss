@@ -129,7 +129,8 @@
          display: flex;
          justify-content: space-evenly;
          max-width: 960px;
-         margin: 0 auto;
+         margin-left: 15%;
+         margin-right: 15%;
 
          @include phone {
             flex-wrap: wrap;
