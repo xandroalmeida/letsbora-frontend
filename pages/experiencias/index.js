@@ -151,95 +151,97 @@ function Experiencia() {
          title="O que fazer na África do Sul | Let’s Bora"
          description="Aproximando pessoas e proporcionando experiências inesquecíveis. O Let’s Bora traz dicas de quais são as melhores experiências para você curtir a África do Sul."
          customFooter={customFooter}>
-         <section className="body-interna">
-            <h1>O que fazer na África do Sul?</h1>
-            <p class="linhaFina">Está com dúvidas sobre o seu roteiro de viagem para à África do Sul? Com a Let’s Bora, você tem acesso a experiências exclusivas, customizadas para o seu estilo de vida e com aquela pitada de emoção e verdade. Passeios gastronômicos, eventos cheios de adrenalina e até voos de helicóptero. Escolha os seus e faça parte da cultura sul-africana.</p>
-            <h2>Encontre aqui a sua experiência</h2>
-            <div className="search-text">
-               <input type="text" name="search" placeholder="O QUE VOCÊ PROCURA?" onChange={setTimerSearchText} />
-               <div className="actions">
-                  <div className="btn-close" onClick={() => cleanSearchTerm()}>
-                     <i className="fas fa-times"></i>
-                  </div>
-               </div>
-               <div className="filter-advanced" onClick={() => setShowMaisFiltros(!showMaisFiltros)}>
-                  <i className="fas fa-sliders-h"></i> Ver mais filtros
-               </div>
-            </div>
-            <div className="row-height-notequal">
-               <div className={`col-esq-bar ${showMaisFiltros ? '' : 'hide-column'}`}>
-                  <FilterBar />
-                  <Link href={pathsMenu.intercambio}>
-                     <a className="box-fazer-intercambio">
-                        <span>Quero fazer<br />intercâmbio</span>
-                        <div className="bg-image"></div>
-                     </a>
-                  </Link>
-                  <Link href={pathsMenu.voluntario}>
-                     <a className="box-ser-voluntario">
-                        <span>Quero ser<br />voluntário</span>
-                        <div className="bg-image"></div>
-                     </a>
-                  </Link>
-               </div>
-               <div className={`content-filtered ${showMaisFiltros ? 'open' : ''}`}>
-                  {/* <div className="banner-publicidade">
-                     BANNER DE ANUNCIO DIRECIONADO
-                  </div> */}
-
-                  {loading && <Loading />}
-                  {experiences && experiences.length === 0 && <div className="none_exp_found">Nenhuma experiência encontrada</div>}
-
-                  {experiences && <GridExperiencias data={experiences} start={0} end={1} />}
-
-                  <Link href={pathsMenu.expPersonalizar}>
-                     <div className="btn-vazado btn-personalize">clique aqui e personalize a sua experiência de viagem!</div>
-                  </Link>
-
-                  <div className="container-blog">
-                     <h3 className="title-blog">descubra mais sobre a África do Sul</h3>
-                     <div className="wrapper-blog">
-                        <Posts data={posts} totalShow={3} />
+         <section className="body-interna intercambio">
+            <div class="container">
+               <h1>O que fazer na África do Sul?</h1>
+               <p class="linhaFina">Está com dúvidas sobre o seu roteiro de viagem para à África do Sul? Com a Let’s Bora, você tem acesso a experiências exclusivas, customizadas para o seu estilo de vida e com aquela pitada de emoção e verdade. Passeios gastronômicos, eventos cheios de adrenalina e até voos de helicóptero. Escolha os seus e faça parte da cultura sul-africana.</p>
+               <h2>Encontre aqui a sua experiência</h2>
+               <div className="search-text">
+                  <input type="text" name="search" placeholder="O QUE VOCÊ PROCURA?" onChange={setTimerSearchText} />
+                  <div className="actions">
+                     <div className="btn-close" onClick={() => cleanSearchTerm()}>
+                        <i className="fas fa-times"></i>
                      </div>
                   </div>
+                  <div className="filter-advanced" onClick={() => setShowMaisFiltros(!showMaisFiltros)}>
+                     <i className="fas fa-sliders-h"></i> Ver mais filtros
+                  </div>
+               </div>
+               <div className="row-height-notequal">
+                  <div className={`col-esq-bar ${showMaisFiltros ? '' : 'hide-column'}`}>
+                     <FilterBar />
+                     <Link href={pathsMenu.intercambio}>
+                        <a className="box-fazer-intercambio">
+                           <span>Quero fazer<br />intercâmbio</span>
+                           <div className="bg-image"></div>
+                        </a>
+                     </Link>
+                     <Link href={pathsMenu.voluntario}>
+                        <a className="box-ser-voluntario">
+                           <span>Quero ser<br />voluntário</span>
+                           <div className="bg-image"></div>
+                        </a>
+                     </Link>
+                  </div>
+                  <div className={`content-filtered ${showMaisFiltros ? 'open' : ''}`}>
+                     {/* <div className="banner-publicidade">
+                        BANNER DE ANUNCIO DIRECIONADO
+                     </div> */}
 
-                  {experiences && experiences.length > 6 && <GridExperiencias data={experiences} start={2} end={3} />}
+                     {loading && <Loading />}
+                     {experiences && experiences.length === 0 && <div className="none_exp_found">Nenhuma experiência encontrada</div>}
 
-                  <div className="container-blog">
-                     <h3 className="title-blog">tudo para a sua viagem</h3>
-                     <div className="wrapper-blog row-tudo-viagem">
-                        <div className="item-post">
-                           <Link href={pathsMenu.intercambio}>
-                              <img src="https://letsborafrontend.s3.amazonaws.com/assets/imgs/quero_fazer_intercambio.jpg" alt="Intercâmbio" />
-                           </Link>
-                           <h3>Quero fazer intercâmbio</h3>
-                           <Link href={pathsMenu.intercambio}>SAIBA MAIS</Link>
-                        </div>
-                        <div className="item-post">
-                           <Link href={pathsMenu.intercambio}>
-                              <img src="https://letsborafrontend.s3.amazonaws.com/assets/imgs/quero_ser_voluntario.jpg" alt="Intercâmbio" />
-                           </Link>
-                           <h3>Quero ser voluntário</h3>
-                           <Link href={pathsMenu.voluntario}>SAIBA MAIS</Link>
-                        </div>
-                        <div className="item-post">
-                           <Link href={`https://api.whatsapp.com/send?phone=553175234402&text=Ol%C3%A1%20Milhas%20Trip!%20Sou%20cliente%20Let's%20Bora%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20passagens%20a%C3%A9reas%20internacionais.%20Pode%20me%20ajudar%3F`}>
-                              <a target="_blank">
-                                 <img src="https://letsborafrontend.s3.amazonaws.com/assets/imgs/milhas_trip.jpg" alt="Intercâmbio" />
-                              </a>
-                           </Link>
-                           <h3>Passagem aérea</h3>
-                           <Link href={`https://api.whatsapp.com/send?phone=553175234402&text=Ol%C3%A1%20Milhas%20Trip!%20Sou%20cliente%20Let's%20Bora%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20passagens%20a%C3%A9reas%20internacionais.%20Pode%20me%20ajudar%3F`}>
-                              <a target="_blank">SAIBA MAIS</a>
-                           </Link>
+                     {experiences && <GridExperiencias data={experiences} start={0} end={1} />}
+
+                     <Link href={pathsMenu.expPersonalizar}>
+                        <div className="btn-vazado btn-personalize">clique aqui e personalize a sua experiência de viagem!</div>
+                     </Link>
+
+                     <div className="container-blog">
+                        <h3 className="title-blog">Descubra mais sobre a África do Sul</h3>
+                        <div className="wrapper-blog">
+                           <Posts data={posts} totalShow={3} />
                         </div>
                      </div>
+
+                     {experiences && experiences.length > 6 && <GridExperiencias data={experiences} start={2} end={3} />}
+
+                     <div className="container-blog">
+                        <h3 className="title-blog">Tudo para a sua viagem</h3>
+                        <div className="wrapper-blog row-tudo-viagem">
+                           <div className="item-post">
+                              <Link href={pathsMenu.intercambio}>
+                                 <img src="https://letsborafrontend.s3.amazonaws.com/assets/imgs/quero_fazer_intercambio.jpg" alt="Intercâmbio" />
+                              </Link>
+                              <h3>Quero fazer intercâmbio</h3>
+                              <Link href={pathsMenu.intercambio}>SAIBA MAIS</Link>
+                           </div>
+                           <div className="item-post">
+                              <Link href={pathsMenu.intercambio}>
+                                 <img src="https://letsborafrontend.s3.amazonaws.com/assets/imgs/quero_ser_voluntario.jpg" alt="Intercâmbio" />
+                              </Link>
+                              <h3>Quero ser voluntário</h3>
+                              <Link href={pathsMenu.voluntario}>SAIBA MAIS</Link>
+                           </div>
+                           <div className="item-post">
+                              <Link href={`https://api.whatsapp.com/send?phone=553175234402&text=Ol%C3%A1%20Milhas%20Trip!%20Sou%20cliente%20Let's%20Bora%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20passagens%20a%C3%A9reas%20internacionais.%20Pode%20me%20ajudar%3F`}>
+                                 <a target="_blank">
+                                    <img src="https://letsborafrontend.s3.amazonaws.com/assets/imgs/milhas_trip.jpg" alt="Intercâmbio" />
+                                 </a>
+                              </Link>
+                              <h3>Passagem aérea</h3>
+                              <Link href={`https://api.whatsapp.com/send?phone=553175234402&text=Ol%C3%A1%20Milhas%20Trip!%20Sou%20cliente%20Let's%20Bora%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20passagens%20a%C3%A9reas%20internacionais.%20Pode%20me%20ajudar%3F`}>
+                                 <a target="_blank">SAIBA MAIS</a>
+                              </Link>
+                           </div>
+                        </div>
+                     </div>
+
+                     {experiences && experiences.length > 6 && <GridExperiencias data={experiences} start={4} end={99} />}
+
+                     {loadingMore && <Loading width={60} />}
+                     {numTotalPages > page && experiences && experiences.length >= 12 && <a onClick={() => fetchMorePosts()} className="btn-vazado btn-more">ver mais experiências</a>}
                   </div>
-
-                  {experiences && experiences.length > 6 && <GridExperiencias data={experiences} start={4} end={99} />}
-
-                  {loadingMore && <Loading width={60} />}
-                  {numTotalPages > page && experiences && experiences.length >= 12 && <a onClick={() => fetchMorePosts()} className="btn-vazado btn-more">ver mais experiências</a>}
                </div>
             </div>
          </section>

@@ -242,7 +242,7 @@ function ExperienciaDetalhe() {
                            </div>
                         </div>
                      </div>
-                     {true && <div className="wrap-content">
+                     {false && <div className="wrap-content">
                         <div className="gallery-imgs-exp-others">
                            {mainGallery2Obj && mainGallery2Obj.length > 0 && <Carousel items={mainGallery2Obj} totalShow={mainGallery2Obj.length > 3 ? 3 : mainGallery2Obj.length} />}
                            {mainGallery2Obj && mainGallery2Obj.length === 0 && <div className="spacer-fake"></div>}
