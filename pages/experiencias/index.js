@@ -225,7 +225,7 @@ function Experiencia() {
                            </div>
                            <div className="item-post">
                               <Link href={`https://api.whatsapp.com/send?phone=553175234402&text=Ol%C3%A1%20Milhas%20Trip!%20Sou%20cliente%20Let's%20Bora%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20passagens%20a%C3%A9reas%20internacionais.%20Pode%20me%20ajudar%3F`}>
-                                 <a target="_blank">
+                                 <a target="_blank" class="link">
                                     <img src="https://letsborafrontend.s3.amazonaws.com/assets/imgs/milhas_trip.jpg" alt="Intercâmbio" />
                                  </a>
                               </Link>
