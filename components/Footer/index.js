@@ -13,7 +13,12 @@ function Footer({ customFooter }) {
                   <div className="col-esq">
                      <div className="info-empresa">
                         <ImageContainer src="/assets/imgs/logo_letsbora_white.svg" alt="Let's Bora" />
-
+                     </div>
+                  </div>
+               </div>
+               <div className="content-footer">
+                  <div className="col-esq">
+                     <div className="info-empresa">
                         {!customFooter && <p>Somos uma plataforma de conteúdo, conexão e experiências de viagens, customizadas para o perfil de cada viajante. Não pretendemos ser uma agência de viagens! Somos uma comunidade que conecta pessoas, lugares e momentos.</p>}
                         {customFooter && <h3>{customFooter.title}</h3>}
                         {customFooter && <p>{customFooter.content}</p>}
