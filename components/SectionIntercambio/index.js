@@ -30,7 +30,7 @@ function SectionIntercambio() {
                <Carousel items={itensCarouselExperiencias} />
             </div>
             <Link href={pathsMenu.intercambio}>
-               <a>quero saber mais</a>
+               <a class="withbox">quero saber mais</a>
             </Link>
          </div>
       </section>

@@ -212,6 +212,19 @@ h2.title {
       font-size: 1.6rem;
 
       &:hover {
+       //  background-color: var(--gray);
+         border: none;
+      }
+   }
+
+   a.withbox {
+      position: relative;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 14px 30px;
+      font-size: 1.6rem;
+
+      &:hover {
          background-color: var(--gray);
          border: none;
       }
