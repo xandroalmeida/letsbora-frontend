@@ -151,7 +151,7 @@ function Experiencia() {
          title="O que fazer na África do Sul | Let’s Bora"
          description="Aproximando pessoas e proporcionando experiências inesquecíveis. O Let’s Bora traz dicas de quais são as melhores experiências para você curtir a África do Sul."
          customFooter={customFooter}>
-         <section className="body-interna intercambio">
+         <section className="body-interna experiencias">
             <div class="container">
                <h1>O que fazer na África do Sul?</h1>
                <p class="linhaFina">Está com dúvidas sobre o seu roteiro de viagem para à África do Sul? Com a Let’s Bora, você tem acesso a experiências exclusivas, customizadas para o seu estilo de vida e com aquela pitada de emoção e verdade. Passeios gastronômicos, eventos cheios de adrenalina e até voos de helicóptero. Escolha os seus e faça parte da cultura sul-africana.</p>

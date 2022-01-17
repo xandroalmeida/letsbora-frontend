@@ -231,6 +231,65 @@ h2.title {
    }
 }
 
+.experiencias {
+   text-align: center;
+   position: relative;
+   padding-bottom: 8rem;
+
+   h2 {
+      margin-bottom: 5rem;
+      position: relative;
+   }
+
+   .content-carousel {
+      margin-top: 8rem;
+      margin-bottom: 7.1rem;
+      width: 100%;
+
+      @include phone {
+         margin: 60px auto;
+         width: 85%;
+      }
+
+      .slick-slider {
+         .slide {
+            img {
+               width: 100%;
+               height: 243px;
+               object-fit: cover;
+               padding: 0 4%;
+            }
+         }
+      }
+   }
+
+   a {
+      position: relative;
+      color: var(--gray);
+      //border: 1px solid #fff;
+      //padding: 14px 30px;
+      font-size: 1.6rem;
+
+      &:hover {
+       //  background-color: var(--gray);
+         border: none;
+      }
+   }
+
+   a.withbox {
+      position: relative;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 14px 30px;
+      font-size: 1.6rem;
+
+      &:hover {
+         background-color: var(--gray);
+         border: none;
+      }
+   }
+}
+
 .experiencia {
    text-align: center;
    position: relative;
