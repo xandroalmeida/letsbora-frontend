@@ -72,7 +72,7 @@ export const getServerSideProps = async ({ res }) => {
 
   sitemap += `\n</urlset>`;
 
-  res.setHeader('Content-Type', 'text/txt');
+  res.setHeader('Content-Type', 'text/xml');
   res.write(sitemap);
   res.end();
 
