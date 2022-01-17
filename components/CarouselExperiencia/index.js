@@ -40,7 +40,7 @@ function CarouselExperiencia(props) {
       // ]
    };
 
-   console.log('teste', props.items);
+   //console.log('teste', props.items);
 
    let contador = 0;
 

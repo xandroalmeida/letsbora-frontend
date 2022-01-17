@@ -14,6 +14,7 @@ import { redirectPage } from '../../helpers';
 import PageInterna1 from '../../layouts/PageInterna1';
 import { pathsMenu } from '../../utils/routes';
 import { currencyFormat } from '../../utils/utils';
+import ImageContainer from "../../components/ImageContainer";
 
 function ExperienciaDetalhe() {
 
@@ -183,7 +184,7 @@ function ExperienciaDetalhe() {
       title: "Tudo sobre a África do Sul",
       content: "O que você procura? Safáris? Rotas de vinhos? Praias? Passeios culturais? Museus históricos? Delícias gastronômicas? Com a comunidade Let’s Bora você tem tudo isso! Um roteiro de viagem à África do Sul pode e deve estar cheio de atrativos para você e a sua família curtirem bastante. Um país para se deslumbrar nas quatro estações do ano com todas as suas belezas naturais e curiosidades."
    }
-
+//<iframe width="560" height="315" src="https://www.youtube.com/embed/sQPXvtJQ9p4?controls=0&autoplay=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
    return (
       <PageInterna1
          title="O que fazer na África do Sul | Let’s Bora"
@@ -254,8 +255,11 @@ function ExperienciaDetalhe() {
                      <div className="container">
                         <ul>
                            {arrDaysSchedule && arrDaysSchedule.map((item) => {
+                              console.log(item);
                               return <li key={`item-${expInfoData.idexperiencias}-${item.thumb}`}>
-                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/sQPXvtJQ9p4?controls=0&autoplay=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                 <ImageContainer src={`/assets/uploads/${expInfoData.idexperiencias}/${item.thumb}`} />
+                                 
+                                 
                                  {!item.dayLabel && <div className="info-day">
                                     <h3>Como será sua experiencia</h3>
                                     {ReactHtmlParser(item.description)}
