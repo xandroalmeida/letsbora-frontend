@@ -403,6 +403,7 @@
          text-align: center;
          font-size: 5.4rem;
          line-height: 1.8rem;
+         margin-bottom: 4rem;
 
          @include phone {
             font-size: 3rem;
@@ -434,7 +435,7 @@
                color: #fff;
                font-size: 2.5rem;
                font-family: "Open Sans", sans-serif;
-               font-weight: 600;
+               //font-weight: 600;
             }
          }
       }
