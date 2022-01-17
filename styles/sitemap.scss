@@ -1,0 +1,23 @@
+.sitemap {
+   &.section {
+   //   padding: 20rem 0 15rem;
+   }
+
+   .container {
+      position: relative;
+   }
+
+   h2 {
+      margin-bottom: 6rem;
+      position: relative;
+      z-index: 1;
+   }
+
+   .txt-sitemap {
+      max-width: 664px;
+
+      p {
+         margin-bottom: 4rem;
+      }
+   }
+}
