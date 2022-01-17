@@ -350,9 +350,16 @@ article.post-single {
       }
    }
 
-   h2 {
+   h1 {
       position: relative;
-      margin-bottom: 8rem;
+      margin-bottom: 1rem;
+      font-size: 4rem;
+   }
+
+   p.blog-desc {
+      position: relative;
+      margin-bottom: 4rem;
+      color: white;
    }
 
    .list-all-posts {
