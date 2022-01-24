@@ -51,17 +51,11 @@ function Blog() {
       }
       setLoadingMore(false);
    }
-   
-   const customFooter = {
-      title: "Tudo sobre a África do Sul",
-      content: "O que você procura? Safáris? Rotas de vinhos? Praias? Passeios culturais? Museus históricos? Delícias gastronômicas? Com a comunidade Let’s Bora você tem tudo isso! Um roteiro de viagem à África do Sul pode e deve estar cheio de atrativos para você e a sua família curtirem bastante. Um país para se deslumbrar nas quatro estações do ano com todas as suas belezas naturais e curiosidades."
-   }
 
    return (
       <PageInterna1
          title="Blog | Viagem África do Sul | Let’s Bora"
-         description=" Aproximando pessoas e proporcionando experiências inesquecíveis. O Let’s Bora traz dicas de quais são as melhores experiências para você curtir a África do Sul."
-         customFooter={customFooter}
+         description="Aproximando pessoas e proporcionando experiências inesquecíveis. O Let’s Bora traz dicas de quais são as melhores experiências para você curtir a África do Sul."
       >
          
             

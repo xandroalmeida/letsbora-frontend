@@ -3,8 +3,7 @@ import Link from 'next/link';
 import ImageContainer from '../ImageContainer';
 import { pathsMenu } from '../../utils/routes';
 
-function Footer({ customFooter }) {
-
+function Footer() {
    return (
       <footer>
          <div className="footer">
@@ -19,9 +18,8 @@ function Footer({ customFooter }) {
                <div className="content-footer">
                   <div className="col-esq">
                      <div className="info-empresa">
-                        {!customFooter && <p>Somos uma plataforma de conteúdo, conexão e experiências de viagens, customizadas para o perfil de cada viajante. Não pretendemos ser uma agência de viagens! Somos uma comunidade que conecta pessoas, lugares e momentos.</p>}
-                        {customFooter && <h3>{customFooter.title}</h3>}
-                        {customFooter && <p>{customFooter.content}</p>}
+                        <h3>Tudo sobre a África do Sul</h3>
+                        <p>O que você procura? Safáris? Rotas de vinhos? Praias? Passeios culturais? Museus históricos? Delícias gastronômicas? Com a comunidade Let’s Bora você tem tudo isso! Um roteiro de viagem à África do Sul pode e deve estar cheio de atrativos para você e a sua família curtirem bastante. Um país para se deslumbrar nas quatro estações do ano com todas as suas belezas naturais e curiosidades.</p>
                         <ul className="hidden-mobile">
                            <li><a href="https://www.facebook.com/letsborabr" target="_blank"><i className="fab fa-facebook-f"></i></a></li>
                            <li><a href="https://twitter.com/letsborabr" target="_blank"><i className="fab fa-twitter"></i></a></li>

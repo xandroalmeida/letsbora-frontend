@@ -11,7 +11,7 @@ function PageInterna2({ children }) {
          <main>
             {children}
          </main>
-         <Footer />
+         <Footer/>
       </>
    );
 }

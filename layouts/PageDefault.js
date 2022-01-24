@@ -15,7 +15,7 @@ function PageDefault({ children, title, description }) {
          <main>
             {children}
          </main>
-         <Footer />
+         <Footer/>
       </>
    );
 }
